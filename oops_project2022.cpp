@@ -1,4 +1,4 @@
-#include<conio.h>
+
 #include<string.h>
 #include<iostream>
 #include <iomanip>   
@@ -270,7 +270,7 @@ class Vehicle:public VehicleType , public ParkingLot{
 void Vehicle:: addVehicle(){
     ofstream fout;
     fout.open("VehicleData.txt",ios_base::app|ios_base::binary);
-    getch();
+    cin.get();
     fout.write((char*)this,sizeof(*this));
     fout.close();
 
@@ -386,7 +386,8 @@ void Vehicle:: updateVehicle(int vno){
                 time (&tt); 
                 strcpy(lastUpdatedDateTime,asctime(localtime(&tt)));
 
-                foutIn.seekp(foutIn.tellp()-sizeof(*this));
+                foutIn.seekp(foutIn.tellp() - static_cast<std::streamoff>(sizeof(*this)));
+
                 foutIn.write((char*)this,sizeof(*this));
                 cout<<"\nRecord Updated Successfully\n";
                 flag=1;
@@ -407,11 +408,11 @@ int login(){
    char ch;
    cout <<"\n\n\n\n\n\n\n\t\t\t\t\tCar Parking Reservation System Login";
    cout << "\n\n\n\n\n\n\n\t\t\t\t\t\tEnter Password: ";
-   ch = _getch();
+   ch = cin.get();
    while(ch != 13){//character 13 is enter
       pass.push_back(ch);
       cout << '*';
-      ch = _getch();
+      ch = cin.get();
    }
    if(pass == "pass"){
       cout << "\n\n\n\n\t\t\t\t\t  Access Granted! Welcome To Our System \n\n";
@@ -937,7 +938,7 @@ int main(){
 	cout << "\t\t\t\t\t\xdb        =============================          \xdb\n";
 	cout << "\t\t\t\t\t\xdb                                               \xdb\n";
 	cout << "\t\t\t\t\t\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\xdb\n\n\n";
-	getch();
+	cin.get();
 	system("cls");
     
     login();
@@ -978,7 +979,8 @@ int main(){
                  cout<<"\nEnter no of parking slots available:";
                  cin>>lotcount;
                  parkingLot.createParkingLot(lotcount);
-                 getch();
+                 cin.get();
+
                 break;
            
             
@@ -987,14 +989,16 @@ int main(){
                  int regno;
                  cin>>regno;
                  parkingLot.getSlotNumberFromRegNo(regno);
-                 getch();
+                 std::cin.get();
+
                 break;
 
             case 3:
                 cout<<"\nEnter The Vehicle Number To Search: ";
                 cin>>vno;
                 vehicle.searchVehicle(vno);
-                getch();
+                std::cin.get();
+
                 break;
             case 4:
                 cout<<"\nEnter The Vehicle Number To Deleted: ";
@@ -1009,7 +1013,8 @@ int main(){
                 parkingLot.leave(slotNo);
                 vehicle.deleteVehicle(vno);
                 }
-                getch();
+                std::cin.get();
+
                 
                 break;
             case 5:
@@ -1017,16 +1022,19 @@ int main(){
                 cin>>vno;
                
                 vehicle.updateVehicle(vno);
-                getch();
+                std::cin.get();
+
                 break;
             case 6:
                 vehicle.getAllVehicleList();
-                getch();
+                std::cin.get();
+
                 break;
             case 7:
                 earnedMoney.getAllEarnedMoney();
                 earnedMoney.showEarnedMoney();      
-               getch();
+               std::cin.get();
+
                  break;
                 
             case 8:
@@ -1034,7 +1042,8 @@ int main(){
                 cout << "\nEnter Car Number To know Payment Status: ";
                 cin >> nm ;
                 pa.payment_status(nm);
-                getch();
+                std::cin.get();
+
                 break;            
             case 9:
                 breakInfiniteloop=1;
@@ -1042,7 +1051,8 @@ int main(){
             
             default:
                 cout<<"\nInvalid Choice:";
-                getch();
+                std::cin.get();
+
         }
         if(breakInfiniteloop==1){
             break;

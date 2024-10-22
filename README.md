@@ -21,14 +21,6 @@ The Vehicle Management System is a C++ application designed to manage vehicle de
 - **File Handling**: Utilizes file streams (`ifstream`, `ofstream`, `fstream`) for data persistence. All vehicle data is stored in a text file and managed via the application.
 - **User Interaction**: The program includes a menu-driven console interface where users can interact with the system.
 
-### Functions
-
-1. **addVehicle()**: Prompts the user to input vehicle details and saves them into the file.
-2. **searchVehicle()**: Searches for a vehicle in the file based on the registration number and returns its details.
-3. **updateVehicle(int regNum)**: Updates the information of a specific vehicle in the file.
-4. **deleteVehicle(int regNum)**: Removes a vehicle’s details from the file.
-5. **listVehicles()**: Displays all the vehicles stored in the file.
-
 ## Technologies Used
 
 - **C++**: For the core logic and functionality.

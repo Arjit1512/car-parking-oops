@@ -1,27 +1,16 @@
-Here’s the complete `README.md` including all previous details, along with your contributions:
-
-```markdown
 # Vehicle Management System
 
 ## Overview
 
 The Vehicle Management System is a C++ application designed to manage vehicle information. This system allows users to add, update, search, delete, and list all vehicles in a file-based system. It utilizes standard input/output streams to read/write vehicle data.
 
-## Features
+## My Contributions
 
 - **Add Vehicle**: Add new vehicle details to the system.
 - **Search Vehicle**: Search for vehicles by their registration number or other attributes.
 - **Update Vehicle**: Modify existing vehicle details.
 - **Delete Vehicle**: Remove vehicle information from the system.
 - **List All Vehicles**: Display all vehicles stored in the system.
-
-## User Contributions
-
-This project includes significant contributions in implementing features such as:
-- Searching for vehicles.
-- Deleting vehicles from the system.
-- Updating vehicle details.
-- Listing all vehicles in the database.
 
 ## Code Structure
 
@@ -107,10 +96,3 @@ This project includes significant contributions in implementing features such as
    Registration Number: KA05AB1234, Owner: John Doe, Model: Honda City, Year: 2018
    Registration Number: KA04XY9876, Owner: Alice Smith, Model: Toyota Corolla, Year: 2019
    ```
-
-## Acknowledgements
-
-This project was developed with the purpose of understanding file handling and object-oriented programming in C++. Contributions include enhancements to vehicle management functionalities such as searching, deleting, updating, and listing vehicles.
-```
-
-This complete README includes an overview, code structure, contributions, and instructions on how to compile and run the project, along with example usage.

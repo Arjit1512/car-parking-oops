@@ -5,12 +5,15 @@
 The Vehicle Management System is a C++ application designed to manage vehicle details, add new vehicles, update existing ones, and handle user login. The project uses file handling for data storage and retrieval, allowing users to interact with the system through a console interface. It utilizes standard input/output streams to read/write vehicle data.
 
 ## My Contributions
-
-- **Add Vehicle**: Add new vehicle details to the system.
-- **Search Vehicle**: Search for vehicles by their registration number or other attributes.
-- **Update Vehicle**: Modify existing vehicle details.
-- **Delete Vehicle**: Remove vehicle information from the system.
-- **List All Vehicles**: Display all vehicles stored in the system.
+  - Created a class for the user.
+  - Coded the functions used by the user.
+  - Created a switch case for users to enter and retrieve information.
+  - Added functionality to:
+    1. **Add a new vehicle**: Prompts the user to input vehicle details and saves them to the system.
+    2. **Display all vehicles**: Lists all vehicles currently stored in the system.
+    3. **Search for a vehicle**: Allows users to find a vehicle by its registration number.
+    4. **Delete a vehicle**: Removes a vehicle's details from the system based on user input.
+    5. **Update details of the user**: Modifies existing user information, such as the owner's name or vehicle details.
 
 ## Code Structure
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Vehicle Management System is a C++ application designed to manage vehicle information. This system allows users to add, update, search, delete, and list all vehicles in a file-based system. It utilizes standard input/output streams to read/write vehicle data.
+The Vehicle Management System is a C++ application designed to manage vehicle information. A C++ program to manage vehicle details, add new vehicles, update existing ones, and handle user login. The project uses file handling for data storage and retrieval, allowing users to interact with the system through a console interface. It utilizes standard input/output streams to read/write vehicle data.
 
 ## My Contributions
 
